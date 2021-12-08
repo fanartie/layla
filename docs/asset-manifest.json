@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/layla/static/js/main.1a2b8d68.chunk.js",
-    "main.js.map": "/layla/static/js/main.1a2b8d68.chunk.js.map",
+    "main.js": "/layla/static/js/main.18d6d5d0.chunk.js",
+    "main.js.map": "/layla/static/js/main.18d6d5d0.chunk.js.map",
     "runtime-main.js": "/layla/static/js/runtime-main.58236d71.js",
     "runtime-main.js.map": "/layla/static/js/runtime-main.58236d71.js.map",
     "static/css/2.60ccfa9c.chunk.css": "/layla/static/css/2.60ccfa9c.chunk.css",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.58236d71.js",
     "static/css/2.60ccfa9c.chunk.css",
     "static/js/2.cf1d32bf.chunk.js",
-    "static/js/main.1a2b8d68.chunk.js"
+    "static/js/main.18d6d5d0.chunk.js"
   ]
 }
