@@ -150,7 +150,7 @@ I would like to apply TypeScript and Unit-test when time is allowed for a qualit
 
 ##### _Thank you for your time, hope you enjoy reviewing my work and application._
 
-##### _Feel free sending me email if you have any question._
+##### _Feel free to send me email if you have any question._
 
 fanartie@gmail.com
 
