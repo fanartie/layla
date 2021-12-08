@@ -57,7 +57,7 @@ yarn start
 ```
 
 
-###The design concept and consideration
+### The design concept and consideration
 >The CORS limitation
 
 Because of CORS and CRSF protection, we can't call API through browser. 
@@ -112,6 +112,7 @@ The bug - the musix api doesn't return the covert art as per documentation. I ha
 ![](bug.png)
 
 Then I decided to use a "roughly" solution instead, the [album-art](https://github.com/lacymorrow/album-art#readme) 
+
 It roughly use the name of artist or album to find any possible image. Not perfect, but good for DEMO purpose.
 
 >Instead of using "useEffect", the "useSWR" helps the code being neat and easy-read.
@@ -128,13 +129,14 @@ rm -rf ../docs
 mv build ../docs
 ```
 
-The reason to copy '/app/build' to '/docs', is because I temporary use GitHub Pages for the app hosting. So I can simply host, demo and share the source code at the same place.
+The reason to copy '/app/build' to '/docs', is because I temporary use GitHub Pages for the app hosting. So I can simply host, demo and share the source code together at the same place.
 
 It's a pure 'static' frontend, and most are dynamic API content, no reason to use SSR like NextJS, then we may simply use backend as a serverless API proxy.
 
 Of course, you may upload to any static web hosting like "S3" to publish this app.
 
-Note, you might want to fix the baseURL if you host at other than "https:<endpoint>/layla", because of the GitHub pages constrain, I can't expose site with root "/".
+Note, you might want to fix the baseURL if you host at other than "https://endpoint/layla", because of the GitHub pages constrain, so I can't expose the site with root "/".
+
 Here are 2 spots you need to change when you want to host at other path.
 [
 https://github.com/fanartie/layla/blob/main/app/package.json#L49](https://github.com/fanartie/layla/blob/main/app/src/index.js#L11)
@@ -142,13 +144,13 @@ https://github.com/fanartie/layla/blob/main/app/package.json#L49](https://github
 
 >To Recap
 
-I really had fun and enjoy the assignment, it took me about 5 hours, most of time waste is for finding cover-art alternative, without seeing a cover-art this demo will be very boring.
+I was really having fun and enjoy the assignment, it took me about 5 hours, but most of time waste is for finding cover-art alternative. Without seeing a cover-art this demo will be very boring - hope you agree as well.
 
-Most of the major techniques (including React and AWS cloud) are not a problem to a senior full-stack developer, I didn't really spend too much time for the main features.
+Most of the major techniques (including React and AWS cloud) are not a problem for an experienced senior full-stack developer, I didn't spend too much time for the main features.
 
 I would like to apply TypeScript and Unit-test when time is allowed for a quality work.
 
-Thank you for your time, hope you enjoy reviewing my work and application.
+##### _Thank you for your time, hope you enjoy reviewing my work and application._
 
 Feel free sending me email if you have any question.
 
