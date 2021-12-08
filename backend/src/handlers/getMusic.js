@@ -1,26 +1,45 @@
 
-
 const apiKey = process.env.APIKEY;
-
+const axios = require('axios');
+const endpoint = 'https://api.musixmatch.com/ws/1.1/';
 
 exports.handler = async (event) => {
-    if (event.httpMethod !== 'GET') {
-        throw new Error(`getArtistHandler only accept GET method, you tried: ${event.httpMethod}`);
-    }
 
-    console.info('received:', event);
-
-    console.info('apiKey', apiKey);
-
-    const items = [
-        {name: 'Artie'}
-    ];
-
-    const response = {
-        statusCode: 200,
-        body: JSON.stringify(items)
+    let headers = {
+        "Access-Control-Allow-Headers" : "Content-Type",
+        "Access-Control-Allow-Origin": "*", // Allow from anywhere
+        "Access-Control-Allow-Methods": "GET" // Allow only GET request
     };
 
-    console.info(`response from: ${event.path} statusCode: ${response.statusCode} body: ${response.body}`);
-    return response;
+    try {
+        let query = event.queryStringParameters;
+
+        let apiName = query.apiName;
+
+        console.info('query', query);
+
+        delete query.apiName;
+
+        query.apikey = apiKey;
+
+        let result = await axios.get(endpoint+apiName, {
+            params: query
+        })
+
+        return {
+            statusCode: 200,
+            headers: headers,
+            body: JSON.stringify(result.data)
+        };
+
+    } catch(err) {
+        return {
+            statusCode: 400,
+            headers: headers,
+            body: JSON.stringify(err)
+        };
+    }
+
 }
+
+
