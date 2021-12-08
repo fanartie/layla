@@ -63,8 +63,7 @@ yarn start
 Because of CORS and CRSF protection, we can't call API through browser. 
 Was attempting to use [https://cors-anywhere.herokuapp.com/](https://cors-anywhere.herokuapp.com/), it works but not reliable due to usage constrain.
 
-Was considering to make a local backend, but it's not able for live demo, and is not easy for local tester to run 2 instances together.
-
+Was considering to make a local backend, but it's not able to live demo, and is not easy for local tester to run 2 instances together.
 Then, I decided to create a true cloud solution for this demo.
 
 >The backend
@@ -88,9 +87,8 @@ To avoid abusing, we should add user credential to call the API endpoint.
 I am experienced to apply the user credential at the level of API-Gateway, and why I was attempting to apply Google login for this demo, but it may out of scope too much. It's only a demo, should be fine.
 
 >The country list
-> 
-Was using a country API to get 200+ items for dropdown, that's way too much for the demo purposes.
-Then I removed the code to use "hard-code" const instead. see code [here](https://github.com/fanartie/layla/blob/main/app/src/component/DropdownCountry/index.js#L6-L13) 
+
+Was using a country API to get 200+ items for dropdown, that's way too much for the demo’s purposes. Then I removed the code to use "hard-code" const instead.  see code [here](https://github.com/fanartie/layla/blob/main/app/src/component/DropdownCountry/index.js#L6-L13) 
 
 >To be able to bookmark favourite album, is my first concern of frontend design.
 
@@ -144,7 +142,7 @@ https://github.com/fanartie/layla/blob/main/app/package.json#L49](https://github
 
 >To Recap
 
-I was really having fun and enjoy the assignment, it took me about 5 hours, but most of time waste is for finding cover-art alternative. Without seeing a cover-art this demo will be very boring - hope you agree as well.
+I was really having fun and enjoyed the assignment, it took me about 5 hours, but most of time wasted was for finding cover-art alternative. Without seeing a cover-art this demo will be very boring - hope you agree as well.
 
 Most of the major techniques (including React and AWS cloud) are not a problem for an experienced senior full-stack developer, I didn't spend too much time for the main features.
 
@@ -152,7 +150,7 @@ I would like to apply TypeScript and Unit-test when time is allowed for a qualit
 
 ##### _Thank you for your time, hope you enjoy reviewing my work and application._
 
-Feel free sending me email if you have any question.
+##### _Feel free sending me email if you have any question._
 
 fanartie@gmail.com
 
