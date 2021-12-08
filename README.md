@@ -1,4 +1,4 @@
-#### Layla Assignment Description
+### Layla Assignment Description
 
 Thanks for taking on the Layla coding assignment. Here we’d like to assess your ability to explore API documentation and build a sample application.
 
