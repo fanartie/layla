@@ -118,7 +118,7 @@ The [SWR](https://swr.vercel.app/) is a "hook solution for data fetching", it al
 
 >To recap
 
-I really have fun and enjoy the assignment, it took me about 5 hours, most of time spending is for finding cover-art alternative, without seeing a cover-art this demo will be very boring.
+I really had fun and enjoy the assignment, it took me about 5 hours, most of time waste is for finding cover-art alternative, without seeing a cover-art this demo will be very boring.
 
 Most of the major techniques (including React and AWS cloud) are not a problem to a senior full-stack developer, I didn't really spend too much time for the main features.
 
