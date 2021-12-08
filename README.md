@@ -105,9 +105,12 @@ Any URL update that triggers the useParams hook, and then the observers work tog
 
 see sample at [https://github.com/fanartie/layla/blob/main/app/src/hook/useAlbum.js#L10](https://github.com/fanartie/layla/blob/main/app/src/hook/useAlbum.js#L10)
 
->The album cover art not working - spending time to find the alternative
+>The API bug - album cover art not working - spending time to find the alternative
 
-The musix api doesn't return the covert art as per documentation. I have researched few complex solutions like Spotify, Apple Music, etc... It takes time for the registration and setup procedure and the album-id is not matched with musix.
+The bug - the musix api doesn't return the covert art as per documentation. I have researched few complex solutions like Spotify, Apple Music, etc... It takes time for the registration and setup procedure and the album-id is not matched with musix.
+
+![](bug.png)
+
 Then I decided to use a "roughly" solution instead, the [album-art](https://github.com/lacymorrow/album-art#readme) 
 It roughly use the name of artist or album to find any possible image. Not perfect, but good for DEMO purpose.
 
@@ -115,8 +118,29 @@ It roughly use the name of artist or album to find any possible image. Not perfe
 
 The [SWR](https://swr.vercel.app/) is a "hook solution for data fetching", it also provides the feature of API cache to speed up frontend and avoid redundant API calling.
 
+>The app hosting (frontend)
 
->To recap
+To build the static webpack files, and then copy to "/docs"
+```bash
+cd app
+yarn build
+rm -rf ../docs
+mv build ../docs
+```
+
+The reason to copy '/app/build' to '/docs', is because I temporary use GitHub Pages for the app hosting. So I can simply host, demo and share the source code at the same place.
+
+It's a pure 'static' frontend, and most are dynamic API content, no reason to use SSR like NextJS, then we may simply use backend as a serverless API proxy.
+
+Of course, you may upload to any static web hosting like "S3" to publish this app.
+
+Note, you might want to fix the baseURL if you host at other than "https:<endpoint>/layla", because of the GitHub pages constrain, I can't expose site with root "/".
+Here are 2 spots you need to change when you want to host at other path.
+[
+https://github.com/fanartie/layla/blob/main/app/package.json#L49](https://github.com/fanartie/layla/blob/main/app/src/index.js#L11)
+[https://github.com/fanartie/layla/blob/main/app/src/index.js#L11](https://github.com/fanartie/layla/blob/main/app/src/index.js#L11)
+
+>To Recap
 
 I really had fun and enjoy the assignment, it took me about 5 hours, most of time waste is for finding cover-art alternative, without seeing a cover-art this demo will be very boring.
 
