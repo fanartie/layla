@@ -69,12 +69,12 @@ Then, I decided to create a true cloud solution for this demo.
 
 >The backend
 
-I set up AWS-lambda as proxy backend, and use AWS-APIGateway as for public endpoint.
+I set up AWS-lambda as proxy backend, and use AWS-API-Gateway as for public endpoint.
 
 It takes about 15 minutes to set up, see the clean and simple source code here
 [https://github.com/fanartie/layla/blob/main/backend/src/handlers/getMusic.js](https://github.com/fanartie/layla/blob/main/backend/src/handlers/getMusic.js)
 
-The files under "backend" folder was created by AWS SAM template. 
+Those files under "backend" folder were created by AWS SAM template. 
 
 >The apiKey
 
@@ -96,6 +96,7 @@ Then I removed the code to use "hard-code" const instead. see code [here](https:
 
 We can't purely use Redux to run as a single page app, because we need to store bookmark URL with album-id.
 Then we need to apply the trick of using URL-history, so we may still run with SPA.
+see code [here](https://github.com/fanartie/layla/blob/main/app/src/component/ArtistListOne/index.js#L19)
 
 >The benefit of using "useParams" hook from "react-router-dom"
 
