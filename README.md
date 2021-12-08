@@ -87,6 +87,11 @@ Instead, we should either manually enter the secret into AWS Lambda admin consol
 To avoid abusing, we should add user credential to call the API endpoint.
 I am experienced to apply the user credential at the level of API-Gateway, and why I was attempting to apply Google login for this demo, but it may out of scope too much. It's only a demo, should be fine.
 
+>The country list
+> 
+Was using a country API to get 200+ items for dropdown, that's way too much for the demo purposes.
+Then I removed the code to use "hard-code" const instead. see code [here](https://github.com/fanartie/layla/blob/main/app/src/component/DropdownCountry/index.js#L6-L13) 
+
 >To be able to bookmark favourite album, is my first concern of frontend design.
 
 We can't purely use Redux to run as a single page app, because we need to store bookmark URL with album-id.
@@ -97,4 +102,25 @@ Then we need to apply the trick of using URL-history, so we may still run with S
 This is a beauty and time-saving decision, it works perfectly with the URL-history.
 Any URL update that triggers the useParams hook, and then the observers work together to update the other components perfectly.
 
-see sample at 
+see sample at [https://github.com/fanartie/layla/blob/main/app/src/hook/useAlbum.js#L10](https://github.com/fanartie/layla/blob/main/app/src/hook/useAlbum.js#L10)
+
+>The album cover art not working - spending time to find the alternative
+
+The musix api doesn't return the covert art as per documentation. I have researched few complex solutions like Spotify, Apple Music, etc... It takes time for the registration and setup procedure and the album-id is not matched with musix.
+Then I decided to use a "roughly" solution instead, the [album-art](https://github.com/lacymorrow/album-art#readme) 
+It roughly use the name of artist or album to find any possible image. Not perfect, but good for DEMO purpose.
+
+>Instead of using "useEffect", the "useSWR" helps the code being neat and easy-read.
+The [SWR](https://swr.vercel.app/) is a "hook solution for data fetching", it also provides the feature of API cache to speed up frontend and avoid redundant API calling.
+
+
+>To recap
+
+I really have fun and enjoy the assignment, it took me about 5 hours, most of time spending is for finding cover-art alternative, without seeing a cover-art this demo will be very boring.
+
+Most of the major techniques (including React and AWS cloud) are not a problem to a senior full-stack developer, I didn't really spend too much time for the main features.
+
+I would like to apply TypeScript and Unit-test when time is allowed for a quality work.
+
+Thank you for your time, hope you enjoy reviewing my work and application.
+
