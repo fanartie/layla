@@ -1,4 +1,4 @@
-###Layla Assignment Description
+#### Layla Assignment Description
 
 Thanks for taking on the Layla coding assignment. Here we’d like to assess your ability to explore API documentation and build a sample application.
 
@@ -7,7 +7,7 @@ Below are some high-level guidelines but we have left some things intentionally 
 Time expectations: You can spend as much time as you’d like, but really we expect that you don’t spend more than 4 hours on this exercise. We’re not expecting high-quality production-ready code but are focusing more on understanding what decisions you took and why.
 
 
-###Tech Requirements:
+### Tech Requirements:
 1. Chose any programming language you prefer
 
 2. Preparation:
@@ -111,6 +111,7 @@ Then I decided to use a "roughly" solution instead, the [album-art](https://gith
 It roughly use the name of artist or album to find any possible image. Not perfect, but good for DEMO purpose.
 
 >Instead of using "useEffect", the "useSWR" helps the code being neat and easy-read.
+
 The [SWR](https://swr.vercel.app/) is a "hook solution for data fetching", it also provides the feature of API cache to speed up frontend and avoid redundant API calling.
 
 
